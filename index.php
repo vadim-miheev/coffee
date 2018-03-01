@@ -25,7 +25,6 @@ function __autoload($class){
 }
 
 $front = FrontController::getInstance();
-$front->start();
+$front->startSomeController();
 
-echo "Главная страница";
 //echo $front->getHtml();

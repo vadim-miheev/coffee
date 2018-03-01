@@ -9,6 +9,12 @@
 class IndexController {
 
     function indexAction() {
-        echo "Главная страница";
+
+        if (!empty($_COOKIE['first_entry'])) {
+            echo "Главная страница";
+        } else {
+            setcookie('first_entry', "1", time() + 3600);
+            echo "Данный сайт создан в тренировочных целях и не содержит в себе какой-либо актуальной информации";
+        }
     }
 }

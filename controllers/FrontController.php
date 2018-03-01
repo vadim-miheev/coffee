@@ -11,6 +11,8 @@ class FrontController {
 
     static $instance;
 
+    const UNKNOWN_URI = "Вы ввели несуществующий адрес";
+
     public static function getInstance() {
         if (!(self::$instance instanceof self)) {
             self::$instance = new self;
@@ -27,32 +29,29 @@ class FrontController {
 
         if (!empty($splitRequest[2]) and (count($splitRequest)%2 == 0)) {
             $keys = $values = [];
-            for ($i = 2, $iteration = count($splitRequest); $iteration; $i++) {
+            for ($i = 2; $i < count($splitRequest); $i++) {
                 if ($i % 2 == 0) {
-                    $keys = $splitRequest[$i];
+                    $keys[] = $splitRequest[$i];
                 } else {
-                    $values = $splitRequest[$i];
+                    $values[] = $splitRequest[$i];
                 }
             }
-
             $this->params = array_combine($keys, $values);
         }
     }
 
-    function start() {
-        echo "сейчас будет проверка";
+    function startSomeController() {
         if (class_exists($this->getController())) {
-            echo "класс есть";
             $link = new ReflectionClass($this->getController());
             if ($link->hasMethod($this->getAction())) {
                 $method = $link->getMethod($this->getAction());
                 $controller = $link->newInstance();
                 $method->invoke($controller);
             } else {
-                echo "Вы ввели несуществуюй адреес";
+                echo self::UNKNOWN_URI;
             }
         } else {
-            echo "Вы ввели несуществующий адресс";
+            echo self::UNKNOWN_URI;
         }
     }
 
