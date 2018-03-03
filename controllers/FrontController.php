@@ -9,7 +9,7 @@
 class FrontController {
     private $controller, $action, $params;
 
-    static $instance;
+    static $instance, $navigation, $content, $stylesheet, $script;
 
     const UNKNOWN_URI = "Вы ввели несуществующий адрес";
 
@@ -18,6 +18,12 @@ class FrontController {
             self::$instance = new self;
         }
         return self::$instance;
+    }
+
+    public static function requireWithCheckFile($fileName) {
+        if (!empty($fileName)) {
+            require $fileName;
+        }
     }
 
     function __construct() {
@@ -48,7 +54,7 @@ class FrontController {
                 $controller = $link->newInstance();
                 $method->invoke($controller);
             } else {
-                echo self::UNKNOWN_URI;
+                echo self::UNKNOWN_URI."2";
             }
         } else {
             echo self::UNKNOWN_URI;
