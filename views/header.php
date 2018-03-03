@@ -10,7 +10,7 @@
 <header>
     <div>
         <div class="logo">
-            <a href="http://mylocalcoffee.com">
+            <a href="http://<?=$_SERVER['SERVER_NAME']?>">
                 <img src="/imgs/logo.png">
                 <div class="headerText">Coffee Cards</div>
             </a>
