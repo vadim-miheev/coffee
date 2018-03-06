@@ -6,7 +6,7 @@
  * Time: 18:13
  */
 
-class CreateIndexPageModel {
+class CreateIndexPage {
 
     function __construct() {
         if (!empty($_COOKIE['first_entry'])) {

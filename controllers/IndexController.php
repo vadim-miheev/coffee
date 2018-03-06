@@ -10,7 +10,7 @@ class IndexController {
 
     function indexAction() {
         if (empty($_SESSION['login'])) {
-            new CreateIndexPageModel;
+            new CreateIndexPage;
         } else {
             new CreateCoffeeCardsPage();
         }

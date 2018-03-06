@@ -23,7 +23,7 @@
                 <p><a href="http://<?=$_SERVER['SERVER_NAME']?>/authorization/login/password/forgot">Забыли пароль?</a></p>
             </div>
             <div>
-                <p><?=CreateLoginPageModel::$err?></p>
+                <p><?=CreateLoginPage::$err?></p>
             </div>
 
         </form>

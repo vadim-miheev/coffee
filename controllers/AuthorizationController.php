@@ -10,7 +10,7 @@ class AuthorizationController {
 
     function registAction() {
         if (empty($_SESSION['login'])) {
-            new CreateRegisterPageModel();
+            new CreateRegisterPage();
         } else {
             new CreateCoffeeCardsPage();
         }
@@ -19,10 +19,14 @@ class AuthorizationController {
 
     function loginAction() {
         if(empty($_SESSION['login'])) {
-            new CreateLoginPageModel();
+            new CreateLoginPage();
         } else {
             new CreateCoffeeCardsPage();
         }
+    }
+
+    function logoutAction() {
+        require_once "logout.php";
     }
 
 }

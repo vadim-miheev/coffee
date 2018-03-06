@@ -6,7 +6,7 @@
  * Time: 12:16
  */
 
-class CreateRegisterPageModel {
+class CreateRegisterPage {
 
     public static $err, $db;
 
@@ -28,8 +28,8 @@ class CreateRegisterPageModel {
     }
 
     function register() {
-        $login = trim($_POST['login']);
-        $email = trim($_POST['email']);
+        $login = mb_strtolower(trim($_POST['login']));
+        $email = mb_strtolower(trim($_POST['email']));
         $password = $_POST['password'];
         $password2 = $_POST['password2'];
 

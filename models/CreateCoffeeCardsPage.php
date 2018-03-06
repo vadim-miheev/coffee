@@ -10,7 +10,7 @@ class CreateCoffeeCardsPage {
 
     function __construct() {
         FrontController::$navigation = "Nav.php";
-        FrontController::$content = "logoutContent.php";
+        FrontController::$content = "coffeecardsContent.php";
         FrontController::$stylesheet = "main.css";
 
         require_once "/views/index.php";

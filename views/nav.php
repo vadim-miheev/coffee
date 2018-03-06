@@ -8,5 +8,6 @@
 ?>
 
 <nav>
-    <a href="http://<?=$_SERVER['SERVER_NAME']?>/authorization/login"><li class="headerText"><?=$_SESSION['login']?></li></a>
+    <a href="http://<?=$_SERVER['SERVER_NAME']?>/authorization/logout"><li class="headerText">Выход</li></a>
+    <a href="http://<?=$_SERVER['SERVER_NAME']?>/authorization/login"><li class="headerText"><?=ucfirst($_SESSION['login'])?></li></a>
 </nav>

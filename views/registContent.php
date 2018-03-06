@@ -28,7 +28,7 @@
             <div>
                 <p><a href="http://<?=$_SERVER['SERVER_NAME']?>/authorization/login">У меня уже есть аккаунт</a></p>
             </div>
-            <p><?=CreateRegisterPageModel::$err?></p>
+            <p id="err"><?=CreateRegisterPage::$err?></p>
         </form>
     </section>
 </article>

@@ -6,7 +6,7 @@
  * Time: 12:20
  */
 
-class CreateLoginPageModel {
+class CreateLoginPage {
 
     public static $err;
 
