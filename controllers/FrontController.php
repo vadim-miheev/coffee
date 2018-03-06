@@ -27,6 +27,7 @@ class FrontController {
     }
 
     function __construct() {
+
         $request = $_SERVER['REQUEST_URI'];
         $splitRequest = explode('/', trim($request, '/'));
 

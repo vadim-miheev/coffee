@@ -1,12 +1,6 @@
-nav>a>li, header>div>a>div {
-
-
-}
 
 nav>a>li:hover {
     background-color: rgba(120, 79, 52, 0.2);
-
-
 }
 
 header>div {
@@ -24,7 +18,6 @@ header>div {
     font-family: "Comic Sans MS", cursive;
     color: beige;
     font-size: 120%;
-
 }
 
 .headerText:active {
@@ -55,7 +48,6 @@ header {
     border: 1px solid #af916c;
     border-radius: 0 0 5px 5px;
     height: 50px;
-
 }
 
 .logo {
@@ -68,10 +60,8 @@ header {
 nav {
     display: inline-block;
     float: right;
-
     margin-right: 100px;
     width: 250px;
-
 }
 
 body {
@@ -141,11 +131,7 @@ body {
     width: 400px;
 }
 
-#registForm>section>form>div>label {
-
-}
-
-#registForm>section>form>div>input {
+#loginForm>section>form>div>input {
     width: 250px;
     height: 30px;
     border-radius: 5px;
@@ -155,14 +141,14 @@ body {
     padding-left: 10px;
 }
 
-#registForm>section>form>div {
+#loginForm>section>form>div {
     margin: auto;
     margin-top: 10px;
     height: 30px;
     width: 250px;
 }
 
-#registForm>section {
+#loginForm>section {
     margin: auto;
     margin-top: 40px;
     padding-top: 50px;
@@ -173,12 +159,12 @@ body {
     border-radius: 2px;
 }
 
-#registForm>section>form {
+#loginForm>section>form {
     width: 500px;
     margin: auto;
 }
 
-#registForm>section>p {
+#loginForm>section>p {
     text-align: center;
     font-family: "Comic Sans MS", cursive;
     color: rgba(0, 0, 0, 0.6);
@@ -186,4 +172,14 @@ body {
     font-weight: bold;
     margin-bottom: 20px;
 }
+
+#loginForm>section>form>div>p {
+    text-align: center;
+}
+
+#loginForm>section>form>p {
+    text-align: center;
+    color: red;
+}
+
 

@@ -9,6 +9,11 @@
 class IndexController {
 
     function indexAction() {
-        new CreateIndexPageModel;
+        if (empty($_SESSION['login'])) {
+            new CreateIndexPageModel;
+        } else {
+            new CreateCoffeeCardsPage();
+        }
+
     }
 }

@@ -24,7 +24,6 @@ function __autoload($class){
     }
 }
 
+session_start();
 $front = FrontController::getInstance();
 $front->startSomeController();
-
-//echo $front->getHtml();

@@ -6,19 +6,26 @@
  * Time: 12:23
  */
 ?>
-<article class="content" id="registForm">
+<article class="content" id="loginForm">
     <section>
         <p>Вход в ваш аккаунт Coffee Cards</p>
-        <form action="http://<?=$_SERVER['SERVER_NAME']?>/login/login" method="post">
+        <form action="http://<?=$_SERVER['SERVER_NAME']?>/authorization/login" method="post">
             <div>
-                <input type="text" name="login" id="login" placeholder="Логин или email">
+                <input type="text" name="loginOrEmail" id="login" placeholder="Логин или email" required="required">
             </div>
             <div>
-                <input type="password" name="password" id="password" placeholder="Пароль">
+                <input type="password" name="password" id="password" placeholder="Пароль" required="required">
             </div>
             <div>
                 <input type="submit" value="Войти">
             </div>
+            <div>
+                <p><a href="http://<?=$_SERVER['SERVER_NAME']?>/authorization/login/password/forgot">Забыли пароль?</a></p>
+            </div>
+            <div>
+                <p><?=CreateLoginPageModel::$err?></p>
+            </div>
+
         </form>
     </section>
 </article>

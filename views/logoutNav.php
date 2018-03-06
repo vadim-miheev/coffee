@@ -8,6 +8,6 @@
 ?>
 
 <nav>
-    <a href="http://<?=$_SERVER['SERVER_NAME']?>/login/login"><li class="headerText">Вход</li></a>
-    <a href="http://<?=$_SERVER['SERVER_NAME']?>/login/regist"><li class="headerText">Регистрация</li></a>
+    <a href="http://<?=$_SERVER['SERVER_NAME']?>/authorization/login"><li class="headerText">Вход</li></a>
+    <a href="http://<?=$_SERVER['SERVER_NAME']?>/authorization/regist"><li class="headerText">Регистрация</li></a>
 </nav>
