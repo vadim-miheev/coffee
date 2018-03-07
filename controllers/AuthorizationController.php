@@ -26,7 +26,7 @@ class AuthorizationController {
     }
 
     function logoutAction() {
-        require_once "logout.php";
+        require_once "/logout/exit.php";
     }
 
 }

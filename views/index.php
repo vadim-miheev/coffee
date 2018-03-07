@@ -17,9 +17,9 @@
 
     </head>
     <body>
-        <?require_once "header.php";?>
+        <? require_once "/mainSite/header.php";?>
         <?FrontController::requireWithCheckFile(FrontController::$content);?>
-        <footer style="text-align: center">
+        <footer>
             © CoffeeCards.by 2018
         </footer>
     </body>

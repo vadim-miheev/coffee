@@ -14,10 +14,10 @@ class CreateRegisterPage {
         /*echo mail("", "Дратути", "Вы возможно жоп\nНо наша адиминистрация не уверена
         \nУбедите нас что вы не жоп");*/
 
-        FrontController::$navigation = "logoutNav.php";
-        FrontController::$content = "registContent.php";
+        FrontController::$navigation = "/logout/nav.php";
+        FrontController::$content = "/regist/content.php";
         FrontController::$stylesheet = "main.css";
-        FrontController::$script = "registScript.php";
+        FrontController::$script = "/regist/script.php";
 
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             self::$db = DbConnect::getCoffee();
@@ -51,7 +51,7 @@ class CreateRegisterPage {
     }
 
     function checkLogin($login) {
-        $sql = "SELECT * FROM users WHERE login = '$login'";
+        $sql = "SELECT login FROM users WHERE login = '$login'";
         $result = self::$db->query($sql) or die("ошибка запроса");
         if(is_array($result->fetch(PDO::FETCH_ASSOC))){
             self::$err = "Такой логин уже занят";
@@ -61,7 +61,7 @@ class CreateRegisterPage {
     }
 
     function checkEmail($email) {
-        $sql = "SELECT * FROM users WHERE email = '$email'";
+        $sql = "SELECT email FROM users WHERE email = '$email'";
         $result = self::$db->query($sql) or die("ошибка запроса");
         if(is_array($result->fetch(PDO::FETCH_ASSOC))){
             self::$err = "Этот email адрес уже зарегистрирован";
@@ -75,7 +75,7 @@ class CreateRegisterPage {
                           VALUES ('$login', '$email', '$password')";
         self::$db->exec($sql);
         $_SESSION['login'] = $login;
-        FrontController::$navigation = "nav.php";
-        FrontController::$content = "registDone.php";
+        FrontController::$navigation = "/mainSite/nav.php";
+        FrontController::$content = "/regist/done.php";
     }
 }

@@ -9,7 +9,7 @@
 <article class="content" id="loginForm">
     <section>
         <p>Поздравляем! Вы успешно зарегистрированы.</p>
-        <p>Теперь вы можете перейти в свой <a href="http://<?=$_SERVER['SERVER_NAME']?>">личный профиль</a><br/>
+        <p>Теперь вы можете перейти в свой <a href="http://<?=$_SERVER['SERVER_NAME']?>/user/profile">личный профиль</a><br/>
             или на <a href="http://<?=$_SERVER['SERVER_NAME']?>">главную страницу</a>.
         </p>
     </section>

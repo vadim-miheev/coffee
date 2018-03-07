@@ -50,6 +50,11 @@ header {
     height: 50px;
 }
 
+footer {
+    padding-top: 20px;
+    text-align: center;
+}
+
 .logo {
     display: inline-block;
     margin-left: 50px;
@@ -181,5 +186,115 @@ body {
     text-align: center;
     color: red;
 }
+
+
+#profile {
+    padding-top: 80px;
+    margin: auto;
+    width: 1000px;
+    min-height: 700px;
+}
+
+#autorizationData {
+    margin: auto;
+    width: 700px;
+    height: 250px;
+    border: 1px solid rgba(0,0,0,0.07);
+    background-color: white;
+    border-radius: 2px;
+}
+
+#autorizationData>div {
+    display: inline-block;
+    margin-top: 40px;
+    width: 100px;
+    float: left;
+    padding-top: 15px;
+}
+
+#autorizationData>div:first-child {
+    display: inline-block;
+    width: 400px;
+    margin-top: 40px;
+    margin-left: 100px;
+    padding-top: 0;
+}
+
+#autorizationData>div>p {
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+
+}
+
+#autorizationData>div>div {
+    display: inline-block;
+    width: 200px;
+}
+
+#autorizationData>div>div:first-child {
+    width: 60px !important;
+
+}
+
+#autorizationData>div>div{
+    display: inline-block;
+    padding: 10px;
+
+}
+
+#autorizationData>div>div:first-child {
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+#autorizationData>div>div>div {
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    height: 19px;
+}
+
+#profile>h3 {
+    text-align: center;
+}
+
+#autorizationData>div:last-child {
+    margin: 0;
+    margin-top: 160px;
+    display: block;
+    float: none;
+    text-align: center;
+    width: 700px;
+}
+
+#publications {
+    min-height: 220px;
+    overflow: hidden;
+    margin: auto;
+    padding: 5px;
+    width: 690px;
+    border: 1px solid rgba(0,0,0,0.07);
+    background-color: white;
+    border-radius: 2px;
+}
+
+#publications>a>div {
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    overflow: hidden;
+    margin: 5px;
+    display: inline-block;
+    float: left;
+    border: 1px solid rgba(0,0,0,0.07);
+    height: 218px;
+    width: 218px;
+}
+
+#addPub {
+    text-align: right;
+    padding-right: 165px;
+}
+
+
 
 

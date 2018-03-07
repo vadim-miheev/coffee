@@ -11,8 +11,8 @@ class CreateLoginPage {
     public static $err;
 
     function __construct() {
-        FrontController::$navigation = "logoutNav.php";
-        FrontController::$content = "loginContent.php";
+        FrontController::$navigation = "logout/nav.php";
+        FrontController::$content = "login/content.php";
         FrontController::$stylesheet = "main.css";
         FrontController::$script = "";
 
@@ -31,7 +31,7 @@ class CreateLoginPage {
 
     function login($loginOrEmail, $password) {
         $db = DbConnect::getCoffee();
-        $sql = "SELECT * FROM users WHERE login = '$loginOrEmail' OR email = '$loginOrEmail'";
+        $sql = "SELECT login, email, password FROM users WHERE login = '$loginOrEmail' OR email = '$loginOrEmail'";
         $result = $db->query($sql) or die("Ошибка входа");
         if(is_array($arr = $result->fetch(PDO::FETCH_ASSOC))) {
             if ($arr['password'] == $password) {
