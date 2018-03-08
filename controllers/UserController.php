@@ -24,4 +24,19 @@ class UserController {
         }
     }
 
+    function opencardAction() {
+        if(empty($_SESSION['login'])) {
+            new CreateLoginPage();
+        } else {
+            new CreateOpenCardPage();
+        }
+    }
+
+    function deleteAction() {
+        if(empty($_SESSION['login'])) {
+            new CreateLoginPage();
+        } else {
+            new DeleteCard();
+        }
+    }
 }

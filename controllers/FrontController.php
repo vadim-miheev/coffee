@@ -7,9 +7,9 @@
  */
 
 class FrontController {
-    private $controller, $action, $params;
+    private $controller, $action;
 
-    static $instance, $navigation, $content, $stylesheet, $script;
+    static $instance, $navigation, $content, $stylesheet, $script, $params;
 
     const UNKNOWN_URI = "Вы ввели несуществующий адрес";
 
@@ -43,7 +43,7 @@ class FrontController {
                     $values[] = $splitRequest[$i];
                 }
             }
-            $this->params = array_combine($keys, $values);
+            self::$params = array_combine($keys, $values);
         }
     }
 
@@ -55,7 +55,7 @@ class FrontController {
                 $controller = $link->newInstance();
                 $method->invoke($controller);
             } else {
-                echo self::UNKNOWN_URI."2";
+                echo self::UNKNOWN_URI;
             }
         } else {
             echo self::UNKNOWN_URI;

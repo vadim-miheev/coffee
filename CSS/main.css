@@ -70,16 +70,19 @@ nav {
 }
 
 body {
-    background-color: rgba(255,223,145,0.1);
+    background-color: rgba(255,223,145,0.3);
     min-width: 1000px;
 }
 
 .content {
     margin: auto;
     margin-top: 50px;
-    border: 1px solid rgba(0, 0, 0, 0.01);
     width: 1000px;
     min-height: 700px;
+}
+
+#mainPage>section {
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 
@@ -146,6 +149,19 @@ body {
     padding-left: 10px;
 }
 
+#addcardForm>section>form>div>input {
+    width: 400px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.3);
+    font-size: 105%;
+    font-family: "serif";
+    padding-left: 10px;
+}
+#submit {
+    width: 200px !important;
+}
+
 #loginForm>section>form>div {
     margin: auto;
     margin-top: 10px;
@@ -153,9 +169,25 @@ body {
     width: 250px;
 }
 
-#loginForm>section {
+#addcardForm>section>form>div{
+    overflow: hidden;
+    text-align: center;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 10px;
+    width: 400px;
+}
+
+#addcardForm>section>form>div>textarea {
+    width: 400px;
+    height: 150px;
+    resize: none;
+}
+
+
+
+#loginForm>section, #addcardForm>section {
+    margin: auto;
+    margin-top: 130px;
     padding-top: 50px;
     width: 700px;
     height: 400px;
@@ -164,12 +196,17 @@ body {
     border-radius: 2px;
 }
 
-#loginForm>section>form {
+#addcardForm>section {
+    margin-top: 80px;
+    padding-top: 10px;
+}
+
+#loginForm>section>form, #addcardForm>section>form {
     width: 500px;
     margin: auto;
 }
 
-#loginForm>section>p {
+#loginForm>section>p, #addcardForm>section>p {
     text-align: center;
     font-family: "Comic Sans MS", cursive;
     color: rgba(0, 0, 0, 0.6);
@@ -295,6 +332,52 @@ body {
     padding-right: 165px;
 }
 
+#mainPage {
+    padding-top: 20px;
+    text-align: center;
+}
 
+#mainPage>section {
+    overflow: hidden;
+    background-color: white;
+    width: 600px;
+    min-height: 300px;
+    margin: 30px auto 0 auto;
+}
+
+#mainPage>section>div p {
+    font-size: 110%;
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+#mainPage>section>div {
+    overflow: hidden;
+}
+
+#mainPage>section img {
+    width: 100%;
+}
+
+#mainPage .date {
+    border-top: 1px solid rgba(0,0,0,0.07);
+    font-size: 90%;
+    text-align: right;
+    padding: 10px 20px;
+    margin: 0;
+
+}
+
+#mainPage .description {
+    text-align: left;
+    font-size: 105%;
+    padding: 10px 20px;
+}
+
+#deleteButton {
+    text-align: right !important;
+    border-top: 1px solid rgba(0,0,0,0.07);
+}
 
 

@@ -34,9 +34,6 @@
     <h3>Ваши публикации</h3>
     <p id="addPub"><a href="http://<?=$_SERVER['SERVER_NAME']?>/user/addcard">Добавить</a></p>
     <section id="publications">
-        <a href="#"><div style="background-image: url(/cards/1.JPG)"></div></a>
-        <a href="#"><div style="background-image: url(/cards/2.JPG)"></div></a>
-        <a href="#"><div style="background-image: url(/cards/3.JPG)"></div></a>
-        <a href="#"><div style="background-image: url(/cards/4.JPG)"></div></a>
+        <?require_once "/profile/userCards.php"?>
     </section>
 </article>

@@ -8,7 +8,7 @@
 
 class CreateProfilePage {
 
-    public static $user, $db, $msg;
+    public static $user, $db, $msg, $userCards;
 
     function __construct() {
         FrontController::$navigation = "/mainSite/nav.php";
@@ -32,7 +32,18 @@ class CreateProfilePage {
             }
         }
 
+        $this->getCardsFromDB();
+
         require_once "/views/index.php";
+    }
+
+    function getCardsFromDB() {
+        $author = self::$user['login'];
+        $sql = "SELECT idcards, author, date, img, description FROM cards WHERE author = '$author' ORDER BY date DESC";
+        $result = self::$db->query($sql);
+        while ($value = $result->fetch(PDO::FETCH_ASSOC)){
+            self::$userCards[] = $value;
+        }
     }
 
     function newPassword($password) {
@@ -78,4 +89,6 @@ class CreateProfilePage {
             return true;
         }
     }
+
+
 }
