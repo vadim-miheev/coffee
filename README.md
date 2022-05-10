@@ -1,3 +1,7 @@
-# coffee
-Данный проект содержит в себе корневую папку сайта, работающего на сервере Apache 2.4 с интерпритатором PHP версии 5.6 и базой данных MySQL версии 5.6.
-Сайт создан в учебных целях и не содержит в себе ни какой актуальной информации.
+# coffee hub (social network)
+This is my first pet-project written for educational purposes using native PHP.
+
+## Requirements:
+* Apache 2.4
+* PHP 5.6
+* MySql 5.6
